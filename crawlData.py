@@ -26,7 +26,7 @@ class crawlData():
         self.db=self.myclient[self.MONGO_DB]
         self.api_id = 9243639  # 输入api_id，一个账号一项
         self.api_hash = '725089e9c7292eaafad3cbfcde0d6ca4'
-        self.phone = "+8613691350052"
+        self.phone = "+86xxxxxxxxxxxxxxx"
         self.loop = asyncio.new_event_loop()
         asyncio.set_event_loop(self.loop)
         self.client = TelegramClient(self.phone, self.api_id, self.api_hash,proxy=self.proxy,connection_retries=1)
