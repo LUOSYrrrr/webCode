@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/static/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+    <title>update</title>
+</head>
+<body>
+<main id="main">
+  <section id="team" class="team">
+    <div class="container">
+      <div class="section-title">
+        <h2>群成员更新情况</h2>
+      
+
+      </div>
+    </div>
+  </section><!-- End Our Team Section -->
+    <section id="about" class="about">
+      <div class="container">
+        
+          
+    
+        <div class="row no-gutters">
+      
+          <div class="col-lg-6  d-flex flex-column justify-content-center about-content">
+            <table class="table table-striped" style="font-size: smaller">
+              <tr>
+                <td>本轮内重复数据：</td>
+                <td>{{ res['repeat'] }}(即同一用户ID发送的消息)</td>
+            </tr>
+            <tr>
+                <td>新增用户量：</td>
+                <td>{{ res['insert'] }}</td>
+            </tr>
+            <tr>
+                <td>与数据库原有用户的重复数量：</td>
+                <td>{{ res['update'] }}</td>
+            </tr>
+            <tr>
+                <td>本轮更新共用时：</td>
+                <td>{{ res['time'] }}</td>
+            </tr>
+            <tr>
+              <td>kmeans:</td>
+              <td> <img src="./static/images/kmeans_{{ res['table'] }}.png" height="100%" width="100%"></td>
+
+          </tr>
+            <!-- <tr>
+                <td>:TextCNN result</td>
+                <td><img src="./static/images/cnn_{{ res['table'] }}.png" alt="TextCNN result"></td>
+            </tr>
+            <tr>
+                <td>TextCNN result:</td>
+                <td><img src="./static/images/kmeans_{{ res['table'] }}.png" alt="TextCNN result"></td>
+            </tr> -->
+        
+        
+        
+        
+         </table>
+    
+    
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <img src="./static/images/cnn_{{ res['table'] }}.png" alt="TextCNN result">
+           
+        
+        
+              </div>
+        </div>
+      </div>
+     </section><!-- End Counts Section --
+ <!-- <div class="container">
+ <table class="table table-striped" style="font-size: smaller">
+      <tr>
+        <td>本轮内重复数据：</td>
+        <td>{{ res['repeat'] }}(即同一用户ID发送的消息)</td>
+    </tr>
+    <tr>
+        <td>新增用户量：</td>
+        <td>{{ res['insert'] }}</td>
+    </tr>
+    <tr>
+        <td>与数据库原有用户的重复数量：</td>
+        <td>{{ res['update'] }}</td>
+    </tr>
+    <tr>
+        <td>本轮更新共用时：</td>
+        <td>{{ res['time'] }}</td>
+    </tr>
+    <tr>
+        <td>TextCNN result:</td>
+        <td><img src="./static/images/cnn_{{ res['table'] }}.png" alt="TextCNN result"></td>
+    </tr>
+    <tr>
+        <td>TextCNN result:</td>
+        <td><img src="./static/images/kmeans_{{ res['table'] }}.png" alt="TextCNN result"></td>
+    </tr>
+
+
+
+
+ </table>
+       </div> -->
+</main>
+</body>
+</html>

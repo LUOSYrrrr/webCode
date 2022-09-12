@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>user</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/static/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<main id="main">
+ <section id="team" class="team">
+      <div class="container">
+        <div class="section-title">
+          <h2>{{ user['id']|safe }}用户分析</h2>
+        </div>
+      </div>
+    </section><!-- End Our Team Section -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="row no-gutters">
+  <div class="col-lg-6 video-box">
+          <a href="/updategroup"><input type=button value=刷新 onclick="history.go(0)"></a>
+
+          <table class="table table-striped" style="font-size: smaller">
+            <tr>
+              <td>tgID:</td>
+              <td>{{ user['id']|safe }}</td>
+          </tr>
+          <tr>
+              <td>latest:</td>
+              <td>{{ user['latest']|safe }}</td>
+          </tr>
+          <tr>
+              <td>topic:</td>
+              <td>{{ user['topic']|safe }}</td>
+          </tr>
+          <tr>
+              <td>per:</td>
+              <td>{{ user['per']|safe }}</td>
+          </tr>
+          <tr>
+              <td>loc:</td>
+              <td>{{ user['loc']|safe }}</td>
+          </tr>
+          <tr>
+              <td>org:</td>
+              <td>{{ user['org']|safe }}</td>
+          </tr>
+          <tr>
+              <td>time:</td>
+              <td>{{ user['time']|safe }}</td>
+          </tr>
+          <tr>
+              <td>contact:</td>
+              <td>{{ user['contact']|safe }}</td>
+          </tr>
+          <tr>
+              <td>frequency:</td>
+              <td>{{ user['frequency']|safe }}</td>
+          </tr>
+</table>
+
+      </div>
+      <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+        <div class="section-title">
+          <h2>相关人员分析</h2>
+         
+        </div>
+
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+          <img src="./static/net/groupr1net5289614815.png" >
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+ </section><!-- End Counts Section -->
+
+ <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+</main>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

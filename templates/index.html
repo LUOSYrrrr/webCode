@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>group列表</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/static/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<main id="main">
+ <section id="team" class="team">
+      <div class="container">
+        <div class="section-title">
+          <h2>已加入的TG小组列表</h2>
+        </div>
+      </div>
+    </section><!-- End Our Team Section -->
+    <section id="about" class="about">
+      <div class="container">
+    
+        <div class="row no-gutters">
+          <a href="/updategroup"><input type=button value=刷新 onclick="history.go(0)"></a>
+          <a href="/updategroup"><input type=button value=主题分析 onclick="history.go(0)"></a>
+
+          <table class="table table-striped" style="font-size: smaller">
+          <tr>
+              <td>选择</td>
+              <td>序号</td>
+                  <td>群聊名称</td>
+
+               <td>刷新群聊主题分析</td>
+               <td>查看主题分析结果</td>
+               <td>查看群聊词云结果</td>
+               <td>刷新人员画像成果</td>
+
+               <td>查看群成员分析</td>
+
+
+
+                  <td>查看群成员画像结果</td>
+                  <td>查看群成员关系网</td>
+
+              </tr>
+           {% for item in groups %}
+               <tr>
+                <td>  {{ item['id'] }}</td>
+                 <td>  <input type="checkbox" id="{{ item['rtable'] }}" ></input></td>
+               <td>{{ item['name'] }}</td>
+                    <td> <button name="updateLDA"id="{{ item['rtable'] }}">updateLDA</button></td>
+                   <td><a href="/LDAview?id={{ item['rtable'] }}">查看主题分析结果</a></td>
+                   <td><a href="/LDA?id={{ item['rtable'] }}">查看主题分析词云</a></td>
+                   <td> <button name="updategroup" id="{{ item['rtable'] }}">update</button></td>
+
+
+
+                   <td><a href="/group?id={{ item['rtable'] }}">查看群成员分析</a></td>
+               <td><a href="/updateres?id={{ item['table'] }}">上次更新时间为 {{ item['update_time'] }},点击查看画像结果</a></td>
+               <td><a href="/net?id={{ item['rtable'] }}">查看群成员关系网</a></td>
+    </tr>
+           {% endfor %}
+
+          </table>
+        </div>
+      </div>
+     </section>
+<!-- <section class="counts section-bg">
+
+ <div class="container">
+
+          <a href="/updategroup"><input type=button value=刷新 onclick="history.go(0)"></a>
+          <a href="/updategroup"><input type=button value=主题分析 onclick="history.go(0)"></a>
+
+          <table class="table table-striped" style="font-size: smaller">
+          <tr>
+              <td>选择</td>
+              <td>序号</td>
+                  <td>群聊名称</td>
+
+               <td>刷新群聊主题分析</td>
+               <td>查看主题分析结果</td>
+               <td>查看群聊词云结果</td>
+               <td>刷新人员画像成果</td>
+
+               <td>查看群成员分析</td>
+
+
+
+                  <td>上次更新时间</td>
+
+              </tr>
+           {% for item in groups %}
+               <tr>
+                <td>  {{ item['id'] }}</td>
+                 <td>  <input type="checkbox" id="{{ item['rtable'] }}" ></input></td>
+               <td>{{ item['name'] }}</td>
+                    <td> <button name="updateLDA"id="{{ item['rtable'] }}">updateLDA</button></td>
+                   <td><a href="/LDAview?id={{ item['rtable'] }}">查看主题分析结果</a></td>
+                   <td><a href="/LDA?id={{ item['rtable'] }}">查看主题分析词云</a></td>
+                   <td> <button name="updategroup" id="{{ item['rtable'] }}">update</button></td>
+
+
+
+                   <td><a href="/group?id={{ item['rtable'] }}">查看群成员分析</a></td>
+               <td><a href="/updateres?id={{ item['table'] }}">上次更新时间为 {{ item['update_time'] }},点击查看画像结果</a></td>
+    </tr>
+           {% endfor %}
+
+          </table>
+
+      </div>
+
+
+ </section>End Counts Section -->
+ <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+</main>
+</body>
+
+</html>
+
+<script>
+    $("button[name='updategroup']").click(function () {
+
+        alert('更新群成员信息需要一定时间，请稍后再来...')
+        id=$(this).attr("id")
+        $.ajax({
+            url:'/update?id='+id,
+            method:'GET',
+            success:function (res) {
+                if(res=='ok'){
+                    alert('update successfully')
+                    location.reload(true)
+                }
+            }
+        })
+    })
+    $("button[name='updateLDA']").click(function () {
+        alert('更新LDA信息需要一定时间，请稍后再来...')
+        id=$(this).attr("id")
+        $.ajax({
+            url:'/updateLDA?id='+id,
+            method:'GET',
+            success:function (res) {
+                if(res=='ok'){
+                    alert('update successfully')
+                    location.reload(true)
+                }
+            }
+        })
+    })
+</script>
